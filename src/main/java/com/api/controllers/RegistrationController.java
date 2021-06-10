@@ -1,6 +1,7 @@
 package com.api.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -30,8 +31,13 @@ public class RegistrationController {
 	   @PostMapping("/register")
 	   public ResponseEntity<String> addStudent(@RequestBody Student student)
 	   {
-		    this.studentService.addStudent(student);
-		   
+		    Student student2 = this.studentService.addStudent(student);
+		   if(student2 == null)
+		   {
+			   return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();   
+		   }
+		   else {
 		   return ResponseEntity.ok("Your registration is done!");
+		   }
 	   }
 }

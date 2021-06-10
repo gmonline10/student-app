@@ -4,6 +4,6 @@ import com.api.models.Student;
 
 public interface StudentService {
 	
-	 public void addStudent(Student student);
+	 public Student addStudent(Student student);
 
 }

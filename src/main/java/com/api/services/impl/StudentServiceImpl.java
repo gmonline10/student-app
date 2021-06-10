@@ -13,14 +13,22 @@ public class StudentServiceImpl implements StudentService {
 	
 	  @Autowired
 	  private StudentRepository studentRepository;
+	  
+	  
 	@Override
-	public void addStudent(Student student) {
+	public Student addStudent(Student student) {
+		
+		  Student student1 = null;
 		  try {
-	        this.studentRepository.save(student);
+	        student1 =  this.studentRepository.save(student);
+	        return student1;
 		  }
 		  catch(Exception e)
 		  {
 			  e.printStackTrace();
+			  return student1;
+			  
+			  
 		  }
 	        
 	        

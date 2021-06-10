@@ -24,11 +24,7 @@ public class Student {
 	     private String twelthPercentage;
 	     private String casteCategory;
 	     private String fatherAnnualIncome;
-	     
-	     
-	     
-	     
-	     
+	     private String OTP;
 		public long getId() {
 			return id;
 		}
@@ -119,10 +115,16 @@ public class Student {
 		public void setFatherAnnualIncome(String fatherAnnualIncome) {
 			this.fatherAnnualIncome = fatherAnnualIncome;
 		}
+		public String getOTP() {
+			return OTP;
+		}
+		public void setOTP(String oTP) {
+			OTP = oTP;
+		}
 		public Student(long id, String firstName, String lastName, String fatherFirstName, String mobileNumber,
 				String schoolStream, String townName, String collageStream, String aadharNumber, String schoolName,
 				String tenthPercentage, String eleventhPercentage, String twelthPercentage, String casteCategory,
-				String fatherAnnualIncome) {
+				String fatherAnnualIncome, String oTP) {
 			super();
 			this.id = id;
 			this.firstName = firstName;
@@ -139,18 +141,12 @@ public class Student {
 			this.twelthPercentage = twelthPercentage;
 			this.casteCategory = casteCategory;
 			this.fatherAnnualIncome = fatherAnnualIncome;
+			OTP = oTP;
 		}
-		
-		
-		
 		public Student() {
 			super();
 			// TODO Auto-generated constructor stub
 		}
-		
-		
-		
-		
 		@Override
 		public String toString() {
 			return "Student [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", fatherFirstName="
@@ -158,20 +154,13 @@ public class Student {
 					+ ", townName=" + townName + ", collageStream=" + collageStream + ", aadharNumber=" + aadharNumber
 					+ ", schoolName=" + schoolName + ", tenthPercentage=" + tenthPercentage + ", eleventhPercentage="
 					+ eleventhPercentage + ", twelthPercentage=" + twelthPercentage + ", casteCategory=" + casteCategory
-					+ ", fatherAnnualIncome=" + fatherAnnualIncome + "]";
+					+ ", fatherAnnualIncome=" + fatherAnnualIncome + ", OTP=" + OTP + "]";
 		}
 	     
-		
-		
-		
 	     
 	     
 	     
 	     
 	     
 	     
-	     
-	     
-	     
-
 }
